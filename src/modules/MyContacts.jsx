@@ -16,7 +16,7 @@ class MyContacts extends Component {
 
     componentDidMount() {
         const contacts = JSON.parse(localStorage.getItem("my-contacts"));
-        if(contacts?.length) { // items && items.length
+        if(contacts?.length) {
             this.setState({contacts})
         }
     }
@@ -25,8 +25,7 @@ class MyContacts extends Component {
      
         const {contacts} = this.state;
         if(prevState.contacts.length !== contacts.length) {
-            console.log("Update contacts")
-            localStorage.setItem("my-contacts", JSON.stringify(contacts));
+           localStorage.setItem("my-contacts", JSON.stringify(contacts));
         }
     }
 
@@ -39,7 +38,7 @@ class MyContacts extends Component {
 
     addContact = ({name, number}) => {
         if(this.isDublicate(name, number)) {
-            alert(`${name}. : ${number} is already in contacts`); // Notify.Alert(`${title}. Author: ${author} is already ixist`)
+            alert(`${name}. : ${number} is already in contacts`); 
             return false;
         }
 
