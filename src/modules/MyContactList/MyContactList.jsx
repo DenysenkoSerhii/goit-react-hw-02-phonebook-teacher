@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import styles from "./my-book-list.module.scss";
+// import styles from "./my-book-list.module.scss";
 
 const MyContactList = ({ removeContact, contacts }) => {
 
