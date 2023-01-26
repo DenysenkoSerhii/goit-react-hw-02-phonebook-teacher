@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 
-import styles from "../my-books.module.scss";
+import styles from "../my-contacts.module.scss";
 
 const MyContactsFilter = ({handleChange}) => {
     return (
-        <div className={styles.formGroup}>
-            <label>Find contacts by name</label>
+        <div>
+            <label className={styles.formGroup}>Find contacts by name</label>
             <input
+              className={styles.formInput}
               type="text"
               name="filter"
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"

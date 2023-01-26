@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import inititalState from "./initialState";
 
-import styles from "../my-books.module.scss";
+import styles from "../my-contacts.module.scss";
 
 class MyContactsForm extends Component {
     state = {...inititalState}
@@ -34,9 +34,10 @@ class MyContactsForm extends Component {
 
         return (
             <form onSubmit={handleSubmit}>
-                <div className={styles.formGroup}>
-                    <label>Name</label>
+                <div>
+                    <label className={styles.formGroup}>Name</label>
                     <input
+                      className={styles.formInput}
                       type="text"
                       name="name"
                       pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -47,9 +48,10 @@ class MyContactsForm extends Component {
                       placeholder="Name"
                      />
                 </div>
-                <div className={styles.formGroup}>
-                    <label>Number</label>
+                <div>
+                    <label className={styles.formGroup}>Number</label>
                     <input
+                      className={styles.formInput}
                       type="tel"
                       name="number"
                       pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"

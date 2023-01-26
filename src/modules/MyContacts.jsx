@@ -5,7 +5,7 @@ import MyContactsForm from "./MyContactsForm/MyContactsForm";
 import MyContactList from "./MyContactList/MyContactList";
 import MyContactsFilter from "./MyContactsFilter/MyContactsFilter";
 
-import styles from "./my-books.module.scss";
+import styles from "./my-contacts.module.scss";
 
 class MyContacts extends Component {
 

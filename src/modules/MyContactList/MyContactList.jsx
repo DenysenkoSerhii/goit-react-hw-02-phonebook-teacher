@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-
-// import styles from "./my-book-list.module.scss";
+ 
+import styles from "../my-contacts.module.scss";
 
 const MyContactList = ({ removeContact, contacts }) => {
 
-    const contactList = contacts.map(({ id, name, number }) => <li key={id}>{name}. : {number}.
+    const contactList = contacts.map(({ id, name, number }) => <li className={styles.formContact} key={id}>{name}. : {number}.
         <button onClick={() => removeContact(id)} type="button">Delete</button></li>);
 
     return (
